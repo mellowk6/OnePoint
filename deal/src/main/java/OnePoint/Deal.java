@@ -36,34 +36,28 @@ public class Deal {
    * 적립거래 발생 시 데이터 셋
    */
   public void setSaveDeal() {
-
-    System.out.println("##적립 생성자로 들어옴");
     Date now = new Date();
     this.setDealDate(now);
     if (this.dealAmount != null) {
       this.setPoint(this.dealAmount * 0.01);
     }
     this.setStatus("success");
-
-//   dealRepository.save(this);
-
   }
 
   /**
    * 사용거래 발생 시 데이터 셋팅 , 포인트가 함께 들어옴
    */
   public void setUseDeal() {
-
     System.out.println("##사용 생성자로 들어옴");
     Date now = new Date();
     this.setDealDate(now);
     this.setStatus("success");
-
-//   dealRepository.save(this);
   }
 
   /**
-   * 적립거래/사용거래 발생 1. 적립거래 발생 시 Point System에 memberId, point 정보를 전달 2. 사용거래 발생 시 Point System에
+   * 적립거래/사용거래 발생
+   * 1. 적립거래 발생 시 Point System에 memberId, point 정보를 전달
+   * 2. 사용거래 발생 시 Point System에
    * memberId, point 정보를 전달 회원의 잔여Point 부족으로 응답값이 false가 올 경우 거래상태(status)를 fail로 셋팅
    */
 
@@ -92,12 +86,12 @@ public class Deal {
         this.setStatus("fail");
         System.out.println("유효하지 않은 거래이기 떄문에 삭제되었습니다.");
       }
-
-
     }
-
-
   }
+
+  /**
+   * 1. 사용거래 success 발생 시 , BillingAmountView 전달을 위해 비동기 통신을 함
+   */
 
   @PostPersist
   public void onPostPersist() {

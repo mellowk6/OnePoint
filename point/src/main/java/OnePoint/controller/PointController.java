@@ -14,12 +14,14 @@ public class PointController {
   @Autowired
   PointService pointService;
 
+  /**
+   * @param pointDecreaseRequest
+   * @return 포인트가 사용할 만큼 충분한 경우, 회원 포인트를 감소시키고 true를 리턴
+   * @throws Exception
+   */
   @PostMapping("/pointDecrease")
   public String pointDecrease(@RequestBody PointDecreaseRequest pointDecreaseRequest)
       throws Exception {
-
-    // 포인트 감소
-    System.out.println("##### /point/pointDecrease  called #####");
 
     Point point = new Point();
 
@@ -27,19 +29,21 @@ public class PointController {
     point.setPoint(pointDecreaseRequest.getPoint());
 
     try {
-
       if (!pointService.pointDecrease(point)) {
         throw new PointLackException();
       }
     } catch (PointLackException e) {
       e.printStackTrace();
-
       System.err.println("PointLack Exception이 발생했습니다.");
       return "false";
     }
     return "true";
   }
 
+  /**
+   *
+   * @param pointIncreaseRequest
+   */
   @PostMapping("/pointIncrease")
   public void pointIncrease(@RequestBody PointIncreaseRequest pointIncreaseRequest)
       throws Exception {

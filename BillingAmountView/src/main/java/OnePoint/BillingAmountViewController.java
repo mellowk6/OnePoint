@@ -20,7 +20,8 @@ public class BillingAmountViewController {
   @PostMapping("/billingAmount")
   public Double billingAmount(@RequestBody BillingRequest billingRequest)
       throws Exception {
-    System.out.println("#####billingAmount 들어옴");
+
+
     double billingAmount = billingAmountService
         .billing(billingRequest.getMercharntId(), billingRequest.getBillingMonth());
 

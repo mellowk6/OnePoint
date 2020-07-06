@@ -19,15 +19,14 @@ public class Billing {
   private Double billingAmount;
   private String billingMonth;
 
+  /**
+   * billing이 생성 될 때 가맹점 번호와 청구년월을 입력 받아 billingAmountView에서 정산금액을 조회해옴
+   */
   @PrePersist
   public void onPrePersist() {
-        /*Billed billed = new Billed();
-        BeanUtils.copyProperties(this, billed);
-        billed.publishAfterCommit();
-        */
-    billingMonthAmout();
 
     OnePoint.external.BillingAmount billingAmount = new OnePoint.external.BillingAmount();
+
     //1.input값 셋팅
     billingAmount.setMercharntId(this.getMercharntId());
     billingAmount.setBillingMonth(this.getBillingMonth());
@@ -42,11 +41,6 @@ public class Billing {
     this.setBillingAmount(billedAmount);
 
   }
-
-  private void billingMonthAmout() {
-
-  }
-
 
   public Long getId() {
     return id;
