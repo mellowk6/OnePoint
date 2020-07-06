@@ -22,42 +22,62 @@
 	* 사용거래 발생 시 Point 시스템과 동기 통신을 통해 사용가능한 포인트인지 확인하고, 거래 성공 시 Point 시스템에 보유포인트 차감을 요청함  
 	* 사용거래 발생 시 거래가 성공인 case에 대해서만 BillingAmountView 시스템에 거래를 누적시킴
 
+##
+
 ## 테스트 시나리오 
 1. memberId 0001 사용자가 적립거래를 10000원 발생 시킴 , 적립률(0.01)은 고정이고 거래금액*적립률 만큼의 Point가 쌓임 
-	요청 | Point |status |dealDate
-	http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=100000 type="save"          |  1000 원  | | 
-	http GET http://localhost:8081/points/0001            | 1000원 | |
-    	http GET http://localhost:8085/deals/1                   |  1000원  | "success"  |  거래 발생시간
+
+
+|요청 | Point | status |dealDate |
+|-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
+|'http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=100000 type="save"'|  1000 원 |    |    |
+|http GET http://localhost:8081/points/0001							  | 1000원   |    |    |  
+|http GET http://localhost:8085/deals/1                                                          |  1000원  | "success"|  거래 발생시간|
 
 2. memberId 0001 사용자의 point 사용거래 . 포인트 사용 거래 시 거래금액은 상관이 없음. 
-	
-	http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use"  point=" 100"
-	http GET http://localhost:8081/points/0001  		point 900원
-    	http GET http://localhost:8085/deals/2 			point 100원 
-	http GET http://localhost:8083/billingAmountViews/2 (Id는 deal을 따라감)
+
+|요청 | Point | status |dealDate |
+|-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use"  |100| | |
+|http GET http://localhost:8081/points/0001  		|900| | | 
+|http GET http://localhost:8085/deals/2 			|100| | | 
+|http GET http://localhost:8083/billingAmountViews/2 (Id는 deal을 따라감)| | | |
 
 3. memberId 0001 사용자의 point 사용거래 (포인트 부족)
-	http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use"  point="10000"
-	http GET http://localhost:8081/points/0001 		point 900원
-    	http GET http://localhost:8085/deals/3 			point 10000원 status =fail
-	http GET http://localhost:8083/billingAmountViews/3 (I실패했으므로 안나옴)
+
+|요청 | Point | status |dealDate |
+|-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use"  |10000| | |
+|http GET http://localhost:8081/points/0001 		|900| | |
+|http GET http://localhost:8085/deals/3 			|10000| fail | |
+|http GET http://localhost:8083/billingAmountViews/3 (I실패했으므로 안나옴)| | | |
 
 
 4. point 증가 테스트 : memberId 0001 의 포인트를 증가시킴 
-	http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=100000 type="save" 
-	http GET http://localhost:8081/points/0001 		point 1900원
-    	http GET http://localhost:8085/deals/4 			point 1000원
+
+|요청 | Point | status |dealDate |
+|-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=100000 type="save"  |         |       |             |
+|http GET http://localhost:8081/points/0001 		                                          | 1900    |       |             |
+|http GET http://localhost:8085/deals/4 		                                          | 1000    |       |             |
 
 
 5. memberId 0002 사용자의 Point 적립 거래 발생 후 사용거래 발생 ( 정산기능 테스트를 위해) 
-	http POST http://localhost:8085/deals memberId=0002 merchantId=20 dealAmount=100000 type="save" 
-	http POST http://localhost:8085/deals memberId=0002 merchantId=20 dealAmount=10000 type="use"  point=" 200"
-	http POST http://localhost:8085/deals memberId=0002 merchantId=20 dealAmount=10000 type="use"  point=" 200"
-	http GET http://localhost:8085/deals/5
-	http GET http://localhost:8085/deals/6
-        http GET http://localhost:8081/points/0002 		point 600원
+
+|요청 | Point | status |dealDate |
+|-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
+|http POST http://localhost:8085/deals memberId=0002 merchantId=20 dealAmount=100000 type="save" | | | |
+|http POST http://localhost:8085/deals memberId=0002 merchantId=20 dealAmount=10000 type="use"  point=" 200" | | | |
+|http POST http://localhost:8085/deals memberId=0002 merchantId=20 dealAmount=10000 type="use"  point=" 200" | | | |
+|http GET http://localhost:8085/deals/5 | | | |
+|http GET http://localhost:8085/deals/6 | | | |
+|http GET http://localhost:8081/points/0002 		|  600 | | |
 
 
 6. 가맹점 20 번의 7월 정산요청 
-	http POST http://localhost:8084/billings mercharntId=20 billingMonth="202007"
-	test 2, 5 의 사용거래 (100원 , 200원, 200원 ) * 0.98 만큼의 금액이 정산금액으로 책정됨  : 490 원 
+
+|요청 | Point | status |dealDate |
+|-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
+|http POST http://localhost:8084/billings mercharntId=20 billingMonth="202007" | | | |
+
+test 2, 5 의 사용거래 (100원 , 200원, 200원 ) * 0.98 만큼의 금액이 정산금액으로 책정됨  : 490 원 
