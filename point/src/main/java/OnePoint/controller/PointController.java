@@ -19,7 +19,7 @@ public class PointController {
    * @return 포인트가 사용할 만큼 충분한 경우, 회원 포인트를 감소시키고 true를 리턴
    * @throws Exception
    */
-  @PostMapping("/pointDecrease")
+   @PostMapping("/pointDecrease")
   public String pointDecrease(@RequestBody PointDecreaseRequest pointDecreaseRequest)
       throws Exception {
 

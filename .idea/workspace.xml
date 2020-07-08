@@ -3,27 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3a940764-363d-4364-8bee-56195afe66b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/Billing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/Billing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/BillingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/BillingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/BillingService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Billing/target/classes/OnePoint/Billing.class" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/target/classes/OnePoint/Billing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Billing/target/classes/OnePoint/BillingService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewViewHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountViewViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountViewViewHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/Deal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deal/target/classes/OnePoint/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/deal/target/classes/OnePoint/Deal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/src/main/java/OnePoint/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/OnePoint/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/target/classes/OnePoint/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/member/target/classes/OnePoint/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point/src/main/java/OnePoint/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/point/src/main/java/OnePoint/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/point/src/main/java/OnePoint/controller/PointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/point/src/main/java/OnePoint/controller/PointController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point/src/main/java/OnePoint/service/PointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/point/src/main/java/OnePoint/service/PointService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point/target/classes/OnePoint/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/point/target/classes/OnePoint/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point/target/classes/OnePoint/controller/PointController.class" beforeDir="false" afterPath="$PROJECT_DIR$/point/target/classes/OnePoint/controller/PointController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point/target/classes/OnePoint/service/PointService.class" beforeDir="false" afterPath="$PROJECT_DIR$/point/target/classes/OnePoint/service/PointService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,28 +107,28 @@
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="571" y="237" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1593949414058" />
-    <state width="1740" height="262" key="GridCell.Tab.0.bottom" timestamp="1594038533151">
+    <state width="1740" height="262" key="GridCell.Tab.0.bottom" timestamp="1594174082992">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1594038533151" />
+    <state width="1740" height="262" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
     <state width="1740" height="262" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.bottom/0.23.1920.991@0.23.1920.991" timestamp="1593308917907" />
-    <state width="1740" height="262" key="GridCell.Tab.0.center" timestamp="1594038533151">
+    <state width="1740" height="262" key="GridCell.Tab.0.center" timestamp="1594174082992">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1594038533151" />
+    <state width="1740" height="262" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
     <state width="1740" height="262" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.center/0.23.1920.991@0.23.1920.991" timestamp="1593308917906" />
-    <state width="1740" height="262" key="GridCell.Tab.0.left" timestamp="1594038533150">
+    <state width="1740" height="262" key="GridCell.Tab.0.left" timestamp="1594174082992">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1594038533150" />
+    <state width="1740" height="262" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
     <state width="1740" height="262" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.left/0.23.1920.991@0.23.1920.991" timestamp="1593308917906" />
-    <state width="1740" height="262" key="GridCell.Tab.0.right" timestamp="1594038533151">
+    <state width="1740" height="262" key="GridCell.Tab.0.right" timestamp="1594174082992">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1594038533151" />
+    <state width="1740" height="262" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
     <state width="1740" height="262" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.right/0.23.1920.991@0.23.1920.991" timestamp="1593308917907" />
     <state x="321" y="120" key="Maven.ArtifactSearchDialog" timestamp="1593953535342">
@@ -175,10 +158,11 @@
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="477" y="245" key="run.anything.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1593567903932" />
-    <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup" timestamp="1594037250390">
+    <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup" timestamp="1594128803275">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1594037250390" />
     <state x="477" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1593664396604" />
+    <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup/1792.23.1048.811/0.23.1792.1031@0.23.1792.1031" timestamp="1594128803275" />
   </component>
 </project>
