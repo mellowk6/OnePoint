@@ -38,7 +38,7 @@
 
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use"  |100| | |
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use" point="100"   |100| | |
 |http GET http://localhost:8081/points/0001  		|900| | | 
 |http GET http://localhost:8085/deals/2 			|100| | | 
 |http GET http://localhost:8083/billingAmountViews/2 (Id는 deal을 따라감)| | | |
@@ -47,7 +47,7 @@
 
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use"  |10000| | |
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=10000 type="use" point="10000" || | |
 |http GET http://localhost:8081/points/0001 		|900| | |
 |http GET http://localhost:8085/deals/3 			|10000| fail | |
 |http GET http://localhost:8083/billingAmountViews/3 (I실패했으므로 안나옴)| | | |
