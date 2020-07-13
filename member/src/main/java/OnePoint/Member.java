@@ -16,13 +16,15 @@ public class Member {
   private String name;
   private String phone;
   private String addess;
+  private String status;
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long memberId;
 
   @PrePersist
   public void onPrePersist() {
     MemberCreated memberCreated = new MemberCreated();
+    memberCreated.setStatus("valid");
     memberCreated.setMemberId(this.getMemberId());
     BeanUtils.copyProperties(this, memberCreated);
     memberCreated.publishAfterCommit();
@@ -31,6 +33,7 @@ public class Member {
   @PreRemove
   public void onPreRemove() {
     MemberSecession memberSecession = new MemberSecession();
+    memberSecession.setStatus("invalid");
     memberSecession.setMemberId(this.getMemberId());
     BeanUtils.copyProperties(this, memberSecession);
     memberSecession.publishAfterCommit();
@@ -69,4 +72,11 @@ public class Member {
   }
 
 
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
 }

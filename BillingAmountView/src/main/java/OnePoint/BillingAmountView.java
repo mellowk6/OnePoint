@@ -12,11 +12,13 @@ public class BillingAmountView {
   @Id
   //   @GeneratedValue(strategy=GenerationType.AUTO)
   private Long id;
+  private Long memberId;
   private Long merchantId;
   private Date dealDate;
   private String type;
   private Double point;
-  private Double billingAmount;
+  private String billingstatus;
+  private String memberStatus;
 
 
   public Long getId() {
@@ -59,12 +61,28 @@ public class BillingAmountView {
     this.point = point;
   }
 
-  public Double getBillingAmount() {
-    return billingAmount;
+
+  public Long getMemberId() {
+    return memberId;
   }
 
-  public void setBillingAmount(Double billingAmount) {
-    this.billingAmount = billingAmount;
+  public void setMemberId(Long memberId) {
+    this.memberId = memberId;
   }
 
+  public String getBillingstatus() {
+    return billingstatus;
+  }
+
+  public void setBillingstatus(String billingstatus) {
+    this.billingstatus = billingstatus;
+  }
+
+  public String getMemberStatus() {
+    return memberStatus;
+  }
+
+  public void setMemberStatus(String memberStatus) {
+    this.memberStatus = memberStatus;
+  }
 }

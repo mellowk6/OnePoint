@@ -1,6 +1,6 @@
 package OnePoint;
 
-import OnePoint.external.BillingAmountService;
+import OnePoint.external.DealService;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,14 +25,14 @@ public class Billing {
   @PrePersist
   public void onPrePersist() {
 
-    OnePoint.external.BillingAmount billingAmount = new OnePoint.external.BillingAmount();
+    OnePoint.external.Deal deal = new OnePoint.external.Deal();
 
     //1.input값 셋팅
-    billingAmount.setMercharntId(this.getMercharntId());
-    billingAmount.setBillingMonth(this.getBillingMonth());
+    deal.setMercharntId(this.getMercharntId());
+    deal.setBillingMonth(this.getBillingMonth());
 
-    Double billedAmount = Application.applicationContext.getBean(BillingAmountService.class)
-        .billingAmount(billingAmount);
+    Double billedAmount = Application.applicationContext.getBean(DealService.class)
+        .billingAmount(deal);
 
     System.out.println("# 가맹점 : " + this.getMercharntId());
     System.out.println("# 청구월 : " + this.getBillingMonth());

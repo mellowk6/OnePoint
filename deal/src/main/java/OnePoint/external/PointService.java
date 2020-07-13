@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @FeignClient(name = "point", url = "http://localhost:8081")
+//@FeignClient(name = "point", url = "http://point:8080")
 public interface PointService {
 
   @RequestMapping(method = RequestMethod.POST, path = "/pointIncrease")

@@ -39,7 +39,7 @@ public class BillingAmountService {
     Double sum = 0.0;
 
     for (int i = 0; i < billingListByMercharntIdAndBillngMont.size(); i++) {
-      sum += billingListByMercharntIdAndBillngMont.get(i).getBillingAmount();
+    //  sum += billingListByMercharntIdAndBillngMont.get(i).get();
     }
     return sum;
   }

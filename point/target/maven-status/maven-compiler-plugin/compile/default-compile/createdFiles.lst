@@ -1,6 +1,7 @@
 OnePoint/Model/Event/PointDisappeared.class
 OnePoint/Application.class
 OnePoint/Model/Event/MemberSecession.class
+OnePoint/Model/Event/UsedDealCancelled.class
 OnePoint/Model/Event/PointDecreased.class
 OnePoint/Model/Event/PointIncreased.class
 OnePoint/service/PointService.class
@@ -12,6 +13,7 @@ OnePoint/AbstractEvent.class
 OnePoint/controller/PointController.class
 OnePoint/Model/Event/PointCreated.class
 OnePoint/controller/PointIncreaseRequest.class
+OnePoint/Model/Event/SavedDealCancelled.class
 OnePoint/controller/PointDecreaseRequest.class
 OnePoint/AbstractEvent$1.class
 OnePoint/Model/Event/MemberCreated.class

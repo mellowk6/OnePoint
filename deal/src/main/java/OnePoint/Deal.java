@@ -30,7 +30,8 @@ public class Deal {
   private Double point;
   private String type;
   private Double dealAmount;
-  private String status;
+  private String status; // 거래 성공여부
+  private String billingStatus; //정산여부
 
   /**
    * 적립거래 발생 시 데이터 셋
@@ -42,6 +43,7 @@ public class Deal {
       this.setPoint(this.dealAmount * 0.01);
     }
     this.setStatus("success");
+    this.setBillingStatus("no");
   }
 
   /**
@@ -52,12 +54,32 @@ public class Deal {
     Date now = new Date();
     this.setDealDate(now);
     this.setStatus("success");
+    this.setBillingStatus("no");
   }
 
   /**
-   * 적립거래/사용거래 발생
-   * 1. 적립거래 발생 시 Point System에 memberId, point 정보를 전달
-   * 2. 사용거래 발생 시 Point System에
+   * 사용취소 거래 발생 시 , 데이터 셋팅
+   */
+  private void setUseCancelDeal() {
+    Date now = new Date();
+    this.setDealDate(now);
+    this.setStatus("success");
+    this.setBillingStatus("no");
+  }
+
+  /**
+   * 적립취소거리 발생 시, 데이터 셋팅
+   */
+  private void setSaveCancelDeal() {
+    Date now = new Date();
+    this.setDealDate(now);
+    this.setStatus("success");
+    this.setBillingStatus("no");
+  }
+
+
+  /**
+   * 적립거래/사용거래 발생 1. 적립거래 발생 시 Point System에 memberId, point 정보를 전달 2. 사용거래 발생 시 Point System에
    * memberId, point 정보를 전달 회원의 잔여Point 부족으로 응답값이 false가 올 경우 거래상태(status)를 fail로 셋팅
    */
 
@@ -89,6 +111,7 @@ public class Deal {
     }
   }
 
+
   /**
    * 1. 사용거래 success 발생 시 , BillingAmountView 전달을 위해 비동기 통신을 함
    */
@@ -104,9 +127,57 @@ public class Deal {
       useRequested.setDealDate(this.getDealDate());
       useRequested.setType(this.getType());
       useRequested.setPoint(this.getPoint());
+      useRequested.setBillingStatus("no");
 
       BeanUtils.copyProperties(this, useRequested);
       useRequested.publishAfterCommit();
+    } else if (this.getType().equals("save")) {
+
+      SaveDealt saveDealt = new SaveDealt();
+      saveDealt.setId(this.getId());
+      saveDealt.setMerchantId(this.getMerchantId());
+      saveDealt.setDealDate(this.getDealDate());
+      saveDealt.setType(this.getType());
+      saveDealt.setPoint(this.getPoint());
+      saveDealt.setBillingStatus("no");
+
+
+      BeanUtils.copyProperties(this, saveDealt);
+      saveDealt.publishAfterCommit();
+
+
+    } else if (this.getType().equals("saveCancel")) { //3. 적립거래취
+      setSaveCancelDeal();
+      SavedDealCancelled savedDealCancelled = new SavedDealCancelled();
+      savedDealCancelled.setId(this.getId());
+      savedDealCancelled.setMerchantId(this.getMerchantId());
+      savedDealCancelled.setDealDate(this.getDealDate());
+      savedDealCancelled.setType(this.getType());
+      savedDealCancelled.setPoint(this.getPoint());
+      savedDealCancelled.setBillingStatus("no");
+
+      BeanUtils.copyProperties(this, savedDealCancelled);
+      savedDealCancelled.publishAfterCommit();
+
+      //
+    } else if (this.getType().equals("useCancel")) { //4. 사용거래 취소
+      setUseCancelDeal();
+
+      //사용거래 취소 !! -> 만약 dealingstatus가 ... 아 그러면 동기호출을 해와야 되는데 잠깐 패쓰!
+
+      UsedDealCancelled usedDealCancelled = new UsedDealCancelled();
+
+      usedDealCancelled.setId(this.getId());
+      usedDealCancelled.setMerchantId(this.getMerchantId());
+      usedDealCancelled.setDealDate(this.getDealDate());
+      usedDealCancelled.setType(this.getType());
+      usedDealCancelled.setPoint(this.getPoint());
+      usedDealCancelled.setBillingStatus("no");
+      usedDealCancelled.setBillingStatus(this.getBillingStatus());
+
+
+      BeanUtils.copyProperties(this, usedDealCancelled);
+      usedDealCancelled.publishAfterCommit();
     }
   }
 }

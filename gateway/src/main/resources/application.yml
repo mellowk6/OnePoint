@@ -50,7 +50,7 @@ spring:
         - id: point
           uri: http://point:8080
           predicates:
-            - Path=/deals/**/points/** 
+            - Path=/points/**
         - id: member
           uri: http://member:8080
           predicates:
@@ -58,7 +58,7 @@ spring:
         - id: BillingAmountView
           uri: http://BillingAmountView:8080
           predicates:
-            - Path= /billingAmountViews/**
+            - Path=/billingAmountViews/**
         - id: Billing
           uri: http://Billing:8080
           predicates:

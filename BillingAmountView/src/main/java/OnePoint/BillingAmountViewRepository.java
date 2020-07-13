@@ -14,4 +14,6 @@ public interface BillingAmountViewRepository extends CrudRepository<BillingAmoun
       @Param("merchantId") Long merchantId, @Param("startDate") Date startDate,
       @Param("endDate") Date endDate);
 
+  @Query("select b from BillingAmountView b where b.memberId= :memberId")
+  List<BillingAmountView> findByMemberId(@Param("memberId") Long memberId);
 }

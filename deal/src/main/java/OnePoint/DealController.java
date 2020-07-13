@@ -1,16 +1,24 @@
 package OnePoint;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
- @RestController
- public class DealController {
+@RestController
+public class DealController {
 
 
- }
+  @Autowired
+  DealService dealService;
+
+  @PostMapping("/dealBillingAmount")
+  public Double billingAmount(@RequestBody BillingRequest billingRequest)
+      throws Exception {
+
+    double billingAmount = dealService
+        .billing(billingRequest.getMercharntId(), billingRequest.getBillingMonth());
+
+    return billingAmount;
+  }
+}

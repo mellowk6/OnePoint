@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SaveDealt extends AbstractEvent {
 
-  private final DealRepository dealRepository = null;
+  //private final DealRepository dealRepository = null;
 
   private Long id;
   private Long memberId;
@@ -16,6 +16,7 @@ public class SaveDealt extends AbstractEvent {
   private String type;
   private Double dealAmount;
   private String Status;
+  private String billingStatus; //정산여부
 
   public SaveDealt(String status) {
     super();
@@ -83,5 +84,13 @@ public class SaveDealt extends AbstractEvent {
 
   public void setStatus(String status) {
     Status = status;
+  }
+
+  public String getBillingStatus() {
+    return billingStatus;
+  }
+
+  public void setBillingStatus(String billingStatus) {
+    this.billingStatus = billingStatus;
   }
 }

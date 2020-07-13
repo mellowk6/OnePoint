@@ -1,8 +1,8 @@
 /Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/Billing.java
-/Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/external/BillingAmountService.java
-/Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/external/BillingAmount.java
+/Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/external/Deal.java
 /Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/BillingController.java
 /Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/config/kafka/KafkaProcessor.java
+/Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/external/DealService.java
 /Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/Billed.java
 /Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/Application.java
 /Users/seoyeon/IdeaProjects/OnePoint/Billing/src/main/java/OnePoint/AbstractEvent.java

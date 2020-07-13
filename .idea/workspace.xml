@@ -3,10 +3,48 @@
   <component name="ChangeListManager">
     <list default="true" id="3a940764-363d-4364-8bee-56195afe66b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/OnePoint/config/kafka/KafkaProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point/src/main/java/OnePoint/controller/PointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/point/src/main/java/OnePoint/controller/PointController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/Billing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/Billing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/external/BillingAmount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/external/Deal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/external/BillingAmountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/java/OnePoint/external/DealService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/target/classes/OnePoint/Billing.class" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/target/classes/OnePoint/Billing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/target/classes/OnePoint/external/BillingAmount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/target/classes/OnePoint/external/BillingAmountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Billing/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Billing/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountView.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/BillingAmountViewViewHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/UseRequested.java" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/java/OnePoint/UseRequested.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/target/classes/OnePoint/BillingAmountViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BillingAmountView/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BillingAmountView/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/deal/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/Deal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/DealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/DealController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/DealRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/DealRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/SaveDealt.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/SaveDealt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/UseRequested.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/UseRequested.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/java/OnePoint/external/PointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/java/OnePoint/external/PointService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deal/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/target/classes/OnePoint/DealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/deal/target/classes/OnePoint/DealController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/target/classes/OnePoint/DealRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/deal/target/classes/OnePoint/DealRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deal/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/deal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/deal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/src/main/java/OnePoint/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/OnePoint/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/src/main/java/OnePoint/MemberCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/OnePoint/MemberCreated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/src/main/java/OnePoint/MemberSecession.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/OnePoint/MemberSecession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/member/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/target/member-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/member/target/member-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point/src/main/java/OnePoint/handeler/PolicyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/point/src/main/java/OnePoint/handeler/PolicyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/point/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/point/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +77,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Billing/src/main/java/OnePoint" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -50,7 +90,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Billing/src/main/java/OnePoint" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="OnePoint" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="OnePoint.Model.Event" />
       <recent name="OnePoint" />
       <recent name="OnePoint.external" />
       <recent name="OnePoint.controller" />
@@ -90,10 +134,10 @@
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="360" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1593951336128" />
-    <state x="665" y="156" key="#com.intellij.ide.util.MemberChooser" timestamp="1593950895025">
+    <state x="665" y="156" key="#com.intellij.ide.util.MemberChooser" timestamp="1594625787790">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state x="665" y="156" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1031@0.23.1792.1031" timestamp="1593950895025" />
+    <state x="665" y="156" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1031@0.23.1792.1031" timestamp="1594625787790" />
     <state x="665" y="165" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1593662586488" />
     <state x="717" y="429" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1592896959869">
       <screen x="0" y="23" width="1792" height="1031" />
@@ -107,28 +151,28 @@
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="571" y="237" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1593949414058" />
-    <state width="1740" height="262" key="GridCell.Tab.0.bottom" timestamp="1594174082992">
+    <state width="1740" height="335" key="GridCell.Tab.0.bottom" timestamp="1594634377859">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
+    <state width="1740" height="335" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1594634377859" />
     <state width="1740" height="262" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.bottom/0.23.1920.991@0.23.1920.991" timestamp="1593308917907" />
-    <state width="1740" height="262" key="GridCell.Tab.0.center" timestamp="1594174082992">
+    <state width="1740" height="335" key="GridCell.Tab.0.center" timestamp="1594634377858">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
+    <state width="1740" height="335" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1594634377858" />
     <state width="1740" height="262" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.center/0.23.1920.991@0.23.1920.991" timestamp="1593308917906" />
-    <state width="1740" height="262" key="GridCell.Tab.0.left" timestamp="1594174082992">
+    <state width="1740" height="335" key="GridCell.Tab.0.left" timestamp="1594634377858">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
+    <state width="1740" height="335" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1594634377858" />
     <state width="1740" height="262" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.left/0.23.1920.991@0.23.1920.991" timestamp="1593308917906" />
-    <state width="1740" height="262" key="GridCell.Tab.0.right" timestamp="1594174082992">
+    <state width="1740" height="335" key="GridCell.Tab.0.right" timestamp="1594634377858">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state width="1740" height="262" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1594174082992" />
+    <state width="1740" height="335" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1594634377858" />
     <state width="1740" height="262" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1593679317220" />
     <state width="1740" height="250" key="GridCell.Tab.0.right/0.23.1920.991@0.23.1920.991" timestamp="1593308917907" />
     <state x="321" y="120" key="Maven.ArtifactSearchDialog" timestamp="1593953535342">
@@ -136,10 +180,10 @@
     </state>
     <state x="321" y="120" key="Maven.ArtifactSearchDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1593953535342" />
     <state x="321" y="126" key="Maven.ArtifactSearchDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1593654844668" />
-    <state x="296" y="23" width="1280" height="1031" key="SettingsEditor" timestamp="1593951133720">
+    <state x="296" y="23" width="1280" height="1031" key="SettingsEditor" timestamp="1594621749862">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state x="296" y="23" width="1280" height="1031" key="SettingsEditor/0.23.1792.1031@0.23.1792.1031" timestamp="1593951133720" />
+    <state x="296" y="23" width="1280" height="1031" key="SettingsEditor/0.23.1792.1031@0.23.1792.1031" timestamp="1594621749862" />
     <state x="296" y="94" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1593585216870" />
     <state x="558" y="215" width="675" height="655" key="StructurePopup" timestamp="1593576619392">
       <screen x="0" y="23" width="1792" height="1097" />
@@ -149,19 +193,19 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="548" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1593576647408" />
-    <state x="500" y="103" width="965" height="810" key="find.popup" timestamp="1593958122589">
+    <state x="500" y="103" width="965" height="810" key="find.popup" timestamp="1594626051978">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state x="500" y="103" width="965" height="810" key="find.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1593958122589" />
+    <state x="500" y="103" width="965" height="810" key="find.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1594626051978" />
     <state x="500" y="108" width="965" height="861" key="find.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1593579420235" />
     <state x="477" y="245" key="run.anything.popup" timestamp="1593567903932">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="477" y="245" key="run.anything.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1593567903932" />
-    <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup" timestamp="1594128803275">
+    <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup" timestamp="1594630544925">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
-    <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1594037250390" />
+    <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1594630544925" />
     <state x="477" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1593664396604" />
     <state x="477" y="23" width="838" height="1031" key="search.everywhere.popup/1792.23.1048.811/0.23.1792.1031@0.23.1792.1031" timestamp="1594128803275" />
   </component>
