@@ -12,7 +12,7 @@ public class UseRequested extends AbstractEvent {
   private String type;
   private Double dealAmount;
   private String status;
-  private String billingStatus; //정산여부
+//  private String billingStatus; //정산여부
 
   public UseRequested() {
     super();
@@ -83,11 +83,5 @@ public class UseRequested extends AbstractEvent {
     this.status = status;
   }
 
-  public String getBillingStatus() {
-    return billingStatus;
-  }
 
-  public void setBillingStatus(String billingStatus) {
-    this.billingStatus = billingStatus;
-  }
 }

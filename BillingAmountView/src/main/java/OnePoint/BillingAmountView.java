@@ -17,7 +17,7 @@ public class BillingAmountView {
   private Date dealDate;
   private String type;
   private Double point;
-  private String billingstatus;
+  //private String billingstatus;
   private String memberStatus;
 
 
@@ -70,13 +70,6 @@ public class BillingAmountView {
     this.memberId = memberId;
   }
 
-  public String getBillingstatus() {
-    return billingstatus;
-  }
-
-  public void setBillingstatus(String billingstatus) {
-    this.billingstatus = billingstatus;
-  }
 
   public String getMemberStatus() {
     return memberStatus;

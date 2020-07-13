@@ -11,7 +11,6 @@ public class UseRequested extends AbstractEvent {
   private Double point;
   private String Type;
   private Double commision;
-  private String billingStatus;
 
   public Long getId() {
     return id;
@@ -69,11 +68,5 @@ public class UseRequested extends AbstractEvent {
     this.commision = commision;
   }
 
-  public String getBillingStatus() {
-    return billingStatus;
-  }
 
-  public void setBillingStatus(String billingStatus) {
-    this.billingStatus = billingStatus;
-  }
 }

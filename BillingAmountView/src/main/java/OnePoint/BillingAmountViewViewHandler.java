@@ -36,7 +36,7 @@ public class BillingAmountViewViewHandler {
         billingAmountView.setType(useRequested.getType());
         billingAmountView.setPoint(useRequested.getPoint());
         billingAmountView.setMemberId(useRequested.getMemberId());
-        billingAmountView.setBillingstatus(useRequested.getBillingStatus());
+    //    billingAmountView.setBillingstatus(useRequested.getBillingStatus());
         billingAmountView.setMemberStatus("valid");
 
         //수수료를 뗀 정산금액을 계산해서 넣어줌 : 사용자가 쓴 포인트 x 0.98을 가맹점에 지급해야 함
@@ -65,7 +65,7 @@ public class BillingAmountViewViewHandler {
         billingAmountView.setType(saveDealt.getType());
         billingAmountView.setPoint(saveDealt.getPoint());
         billingAmountView.setMemberId(saveDealt.getMemberId());
-        billingAmountView.setBillingstatus(saveDealt.getBillingStatus());
+   //     billingAmountView.setBillingstatus(saveDealt.getBillingStatus());
         billingAmountView.setMemberStatus("valid");
 
         // view 레파지 토리에 save
@@ -91,7 +91,7 @@ public class BillingAmountViewViewHandler {
         billingAmountView.setType(usedDealCancelled.getType());
         billingAmountView.setPoint(usedDealCancelled.getPoint());
         billingAmountView.setMemberId(usedDealCancelled.getMemberId());
-        billingAmountView.setBillingstatus(usedDealCancelled.getBillingStatus());
+    //    billingAmountView.setBillingstatus(usedDealCancelled.getBillingStatus());
         billingAmountView.setMemberStatus("valid");
 
         // view 레파지 토리에 save
@@ -117,7 +117,7 @@ public class BillingAmountViewViewHandler {
         billingAmountView.setType(savedDealCancelled.getType());
         billingAmountView.setPoint(savedDealCancelled.getPoint());
         billingAmountView.setMemberId(savedDealCancelled.getMemberId());
-        billingAmountView.setBillingstatus(savedDealCancelled.getBillingStatus());
+    //    billingAmountView.setBillingstatus(savedDealCancelled.getBillingStatus());
         billingAmountView.setMemberStatus("valid");
 
         // view 레파지 토리에 save

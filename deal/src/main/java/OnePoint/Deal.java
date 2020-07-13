@@ -127,7 +127,7 @@ public class Deal {
       useRequested.setDealDate(this.getDealDate());
       useRequested.setType(this.getType());
       useRequested.setPoint(this.getPoint());
-      useRequested.setBillingStatus("no");
+    //  useRequested.setBillingStatus("no");
 
       BeanUtils.copyProperties(this, useRequested);
       useRequested.publishAfterCommit();
@@ -139,7 +139,7 @@ public class Deal {
       saveDealt.setDealDate(this.getDealDate());
       saveDealt.setType(this.getType());
       saveDealt.setPoint(this.getPoint());
-      saveDealt.setBillingStatus("no");
+     // saveDealt.setBillingStatus("no");
 
 
       BeanUtils.copyProperties(this, saveDealt);
@@ -154,7 +154,7 @@ public class Deal {
       savedDealCancelled.setDealDate(this.getDealDate());
       savedDealCancelled.setType(this.getType());
       savedDealCancelled.setPoint(this.getPoint());
-      savedDealCancelled.setBillingStatus("no");
+  //    savedDealCancelled.setBillingStatus("no");
 
       BeanUtils.copyProperties(this, savedDealCancelled);
       savedDealCancelled.publishAfterCommit();
@@ -172,8 +172,7 @@ public class Deal {
       usedDealCancelled.setDealDate(this.getDealDate());
       usedDealCancelled.setType(this.getType());
       usedDealCancelled.setPoint(this.getPoint());
-      usedDealCancelled.setBillingStatus("no");
-      usedDealCancelled.setBillingStatus(this.getBillingStatus());
+     // usedDealCancelled.setBillingStatus("no");
 
 
       BeanUtils.copyProperties(this, usedDealCancelled);

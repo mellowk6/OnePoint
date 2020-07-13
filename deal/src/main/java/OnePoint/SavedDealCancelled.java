@@ -21,7 +21,7 @@ public class SavedDealCancelled extends AbstractEvent {
   private String type;
   private Double dealAmount;
   private String Status;
-  private String billingStatus; //정산여부
+ // private String billingStatus; //정산여부
 
   public SavedDealCancelled() {
     super();

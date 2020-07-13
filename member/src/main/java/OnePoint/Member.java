@@ -25,6 +25,7 @@ public class Member {
   public void onPrePersist() {
     MemberCreated memberCreated = new MemberCreated();
     memberCreated.setStatus("valid");
+    this.setStatus("valid");
     memberCreated.setMemberId(this.getMemberId());
     BeanUtils.copyProperties(this, memberCreated);
     memberCreated.publishAfterCommit();
@@ -34,6 +35,7 @@ public class Member {
   public void onPreRemove() {
     MemberSecession memberSecession = new MemberSecession();
     memberSecession.setStatus("invalid");
+    this.setStatus("invalid");
     memberSecession.setMemberId(this.getMemberId());
     BeanUtils.copyProperties(this, memberSecession);
     memberSecession.publishAfterCommit();
