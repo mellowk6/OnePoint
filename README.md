@@ -42,61 +42,62 @@
 |http GET http://localhost:8081/points/0001                                                                          |1000원| | | 
 |http GET http://localhost:8085/deals/1                                                                              |1000원| | | 
 |http get http://localhost:8083/billingAmountViews/1                                                                 | | | |
-|http http://localhost:8083/billingAmountViews/1 (Id는 deal을 따라감)                                     | | | |
+|http http://localhost:8083/billingAmountViews/1 (Id는 deal을 따라감)                                     		 | | | |
 
 3. 적립거래 취소
 
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http POST http://localhost:8085/deals memberId=0001 merchantId=20 point=1000 type="saveCancel" || | |
-|http GET http://localhost:8081/points/0001 : 다시 원복되는지 확인 (0원) 		|900| | |
-|http GET http://localhost:8085/deals/2 			| | | |
-|http http://localhost:8083/billingAmountViews/2| | | |
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 point=1000 type="saveCancel" 		     | | | |
+|http GET http://localhost:8081/points/0001 : 다시 원복되는지 확인 (0원) 						     | | | |
+|http GET http://localhost:8085/deals/2 									     | | | |
+|http http://localhost:8083/billingAmountViews/2								     | | | |
 
 
 4. 적립거래 발생  memberId 0001 사용자가 적립거래를 10000원 발생 적립률(0.01)은 고정이고 거래금액*적립률 만큼의 Point가 쌓임 
 
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=100000 type="save"  |         |       |             |
-|http GET http://localhost:8081/points/0001  :  다시 천원 		                          |     |       |             |
-|http GET http://localhost:8085/deals/3 		                                          |     |       |             |
-|http http://localhost:8083/billingAmountViews/3 		                                  |     |       |             |
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 dealAmount=100000 type="save"  			| | | |
+|http GET http://localhost:8081/points/0001  :  다시 천원 		                          			     | | | |
+|http GET http://localhost:8085/deals/3 		                                          			 | | | |
+|http http://localhost:8083/billingAmountViews/3 		                                  			 | | | |
 
 
 5. 사용거래 발생  memberId 0002 사용자가 사용거래를 발생 :100 원 사용 
 
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http POST http://localhost:8085/deals memberId=0001 merchantId=20 point=100 type="use" | | | |
-|http GET http://localhost:8081/points/0001 : 100원 써서 900원 | | | |
-|http GET http://localhost:8085/deals/4  point=" 200" | | | |
-|http GET http://localhost:8083/billingAmountViews/4 | | | |
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 point=100 type="use" 				| | | |
+|http GET http://localhost:8081/points/0001 : 100원 써서 900원 							     | | | |
+|http GET http://localhost:8085/deals/4  point=" 200" 									| | | |
+|http GET http://localhost:8083/billingAmountViews/4 									| | | |
 
 
 6. 사용거래 발생 : 가진포인트보다 많이 쓰려고 하는 경우 
 
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http POST http://localhost:8085/deals memberId=0001 merchantId=20 point=10000 type="use" | | | |
-|http GET http://localhost:8081/points/0001 : 여전히 900원 ( 못썻으니까) | | | |
-|http GET http://localhost:8085/deals/5 : fail 거리 남 | | | |
-|http GET http://localhost:8083/billingAmountViews/5 // fail 거래는 view에 쌓지 않음 404 에러 | | | |
+|http POST http://localhost:8085/deals memberId=0001 merchantId=20 point=10000 type="use" 				| | | |
+|http GET http://localhost:8081/points/0001 : 여전히 900원 ( 못썻으니까) 						 | | | |
+|http GET http://localhost:8085/deals/5 : fail 거리 남 								      | | | |
+|http GET http://localhost:8083/billingAmountViews/5 // fail 거래는 view에 쌓지 않음 404 에러 				| | | |
 
 
 7. 정산요청 
 
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http POST http://localhost:8084/billings mercharntId=20 billingMonth="202007"   98원 정산 금액 나옴 | | | |
-|http GET http://localhost:8085/deals/4 // 사용거래 ! 이므로 정산 여부 yes로 바꾼다 | | | |
+|http POST http://localhost:8084/billings mercharntId=20 billingMonth="202007"   98원 정산 금액 나옴 			| | | |
+|http GET http://localhost:8085/deals/4 // 사용거래 ! 이므로 정산 여부 yes로 바꾼다 					  | | | |
 
 
 8. 회원탈퇴 : 아래 회원 상태가다 바뀌어야 됨
+
 |요청 | Point | status |dealDate |
 |-------------------------------------------------------------------------------------------------|:-------:|------:|------------:|
-|http DELETE http://localhost:8082/members/1 | | | |
-|http GET http://localhost:8083/billingAmountViews/1 | | | |
-|http GET http://localhost:8083/billingAmountViews/2 | | | |
-|http GET http://localhost:8083/billingAmountViews/3 | | | |
-|http GET http://localhost:8083/billingAmountViews/4 | | | |
+|http DELETE http://localhost:8082/members/1 										| | | |
+|http GET http://localhost:8083/billingAmountViews/1 									| | | |
+|http GET http://localhost:8083/billingAmountViews/2 									| | | |
+|http GET http://localhost:8083/billingAmountViews/3 									| | | |
+|http GET http://localhost:8083/billingAmountViews/4 									| | | |
